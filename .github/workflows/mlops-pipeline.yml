@@ -50,7 +50,7 @@ jobs:
     needs: data-processing
     runs-on: ubuntu-latest
     env:
-      mlops_url = "http://localhost:5000/health"
+      mlops_url: http://localhost:5000/health
     steps:
       - name: Checkout code
         uses: actions/checkout@v2

@@ -50,7 +50,8 @@ jobs:
     needs: data-processing
     runs-on: ubuntu-latest
     env:
-      mlops_url: http://localhost:5000
+      mlops_uri: http://localhost:5000
+      mlops_url: http://localhost:5000/health
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -84,13 +85,13 @@ jobs:
           done
           echo "variable url"
           for i in {1..10}; do
-            curl -f $mlops_url/health || sleep 5;
+            curl -f $mlops_url || sleep 5;
           done 
 
       - name: Train model
         run: |
           mkdir -p models
-          python src/models/train_model.py --config configs/model_config.yaml --data data/processed/featured_house_data.csv --models-dir models --mlflowtracking-uri $mlops_url # http://localhost:5000
+          python src/models/train_model.py --config configs/model_config.yaml --data data/processed/featured_house_data.csv --models-dir models --mlflow-tracking-uri $mlops_uri # http://localhost:5000
 
       - name: Upload trained model
         uses: actions/upload-artifact@v4

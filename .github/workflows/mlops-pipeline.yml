@@ -49,6 +49,8 @@ jobs:
   model-training:
     needs: data-processing
     runs-on: ubuntu-latest
+    env:
+      mlops_url = "http://localhost:5000/health"
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -76,9 +78,14 @@ jobs:
 
       - name: Wait for MLflow to start
         run: |
+          echo "hardcoded url"
           for i in {1..10}; do
             curl -f http://localhost:5000/health || sleep 5;
           done
+          echo "variable url"
+          for i in {1..10}; do
+            curl -f $mlops_url || sleep 5;
+          done 
 
       - name: Train model
         run: |

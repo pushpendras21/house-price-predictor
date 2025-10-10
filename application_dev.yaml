@@ -11,7 +11,7 @@ spec:
   project: house-price-predictor
   source:
     repoURL: https://github.com/pushpendras21/house-price-predictor.git
-    targetRevision: developer
+    targetRevision: HEAD
     path: deployment/kubernetes
   destination:
     server: https://kubernetes.default.svc

@@ -5,11 +5,11 @@ from schemas import HousePredictionRequest, PredictionResponse
 
 # Initialize FastAPI app with metadata
 app = FastAPI(
-    title="House Price Prediction API",
+    title="House Price Prediction API Oct 2025",
     description=(
         "An API for predicting house prices based on various features. "
-        "This application is part of the MLOps Bootcamp by School of Devops. "
-        "Authored by Gourav Shah."
+        "This application is part of the MLOps Bootcamp Devops. "
+        "Authored by Pushpendra Singh."
     ),
     version="1.0.0",
     contact={

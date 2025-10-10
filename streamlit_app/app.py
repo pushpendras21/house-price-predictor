@@ -13,11 +13,11 @@ st.set_page_config(
 )
 
 # Add title and description
-st.title("House Price Prediction")
+st.title("House Price Prediction Oct 2025")
 st.markdown(
     """
     <p style="font-size: 18px; color: gray;">
-        A simple MLOps demonstration project for real-time house price prediction
+        Welcome to - A simple MLOps demonstration project for real-time house price prediction
     </p>
     """,
     unsafe_allow_html=True,

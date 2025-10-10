@@ -11,7 +11,7 @@ app = FastAPI(
         "This application is part of the MLOps Bootcamp Devops. "
         "Authored by Pushpendra Singh."
     ),
-    version="1.0.0",
+    version="1.0.1",
     contact={
         "name": "School of Devops",
         "url": "https://schoolofdevops.com",

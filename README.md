@@ -1,4 +1,4 @@
-# 🏠 House Price Predictor – An MLOps Learning Project
+# 🏠 House Price Predictor – An MLOps Learning Project Date: 17-Oct-2025
 
 Welcome to the **House Price Predictor** project! This is a real-world, end-to-end MLOps use case designed to help you master the art of building and operationalizing machine learning pipelines.
 
